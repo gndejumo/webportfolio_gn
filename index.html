@@ -510,9 +510,11 @@
     }
 
     .project-card.featured {
-      grid-column: span 3;
+      grid-column: span 2;
       display: grid;
       grid-template-columns: 1fr 1fr;
+      min-height: 320px;
+      overflow: visible;
     }
 
     .project-img {
@@ -520,7 +522,10 @@
       height: 200px;
     }
 
-    .project-card.featured .project-img { height: 100%; }
+    .project-card.featured .project-img { 
+      height: 100%; 
+      min-height: 320px;
+    }
 
     .project-img img {
       width: 100%;
@@ -946,49 +951,62 @@
 </section>
 
 <!-- WORK -->
-<section id="work">
-  <div class="work-inner">
-    <div class="fade-up">
-      <div class="section-label">My Portfolio</div>
-      <h2 class="section-title">Featured <em style="font-style:italic;color:var(--accent)">Projects</em></h2>
-      <p class="section-desc">A selection of my recent work — each project a unique challenge and an opportunity for creative solutions.</p>
-    </div>
+      <section id="work">
+        <div class="work-inner">
+          <div class="fade-up">
+            <div class="section-label">My Portfolio</div>
+            <h2 class="section-title">Featured <em style="font-style:italic;color:var(--accent)">Projects</em></h2>
+            <p class="section-desc">A selection of my recent work — each project a unique challenge and an opportunity for creative solutions.</p>
+          </div>
 
-    <div class="projects-grid">
-      <div class="project-card fade-up">
-        <div class="project-img"><img src="../images/capstoneimg1.png" alt="Xelor"></div>
-        <div class="project-body">
-          <h3>Xelor — Capstone Project</h3>
-          <p>An e-commerce app inspired by Rolex with CRUD ops, cart management, and purchase history. Built with Vue.js, MongoDB, Express, Node.js.</p>
-          <a href="http://zuitt-bootcamp-prod-560-8949-gamilla.s3-website.us-east-1.amazonaws.com/" target="_blank" class="project-link">View Project →</a>
+          <div class="projects-grid">
+        <!-- Row 1 -->
+        <div class="project-card fade-up">
+          <div class="project-img"><img src="./images/airlineapp.png" alt="LesGoPH"></div>
+          <div class="project-body">
+            <div class="section-label" style="margin-bottom:0.5rem;">Featured Project</div>
+            <h3>LesGoPH — Airline Booking</h3>
+            <p>A full-stack airline booking application with flight search, ticket booking, and user authentication. Built using the MERN stack.</p>
+            <a href="https://lesgoph.vercel.app/" target="_blank" class="project-link">View Project →</a>
+          </div>
+        </div>
+        <div class="project-card fade-up" style="transition-delay:0.1s">
+          <div class="project-img"><img src="./images/blogapp.png" alt="KwentoHub"></div>
+          <div class="project-body">
+            <h3>KwentoHub — Blog App</h3>
+            <p>A full-stack blog platform with user authentication, post creation, and feed browsing. Built with React, Node.js, Express, and MongoDB.</p>
+            <a href="https://blog-app-gnd-ee.vercel.app/" target="_blank" class="project-link">View Project →</a>
+          </div>
+        </div>
+        <div class="project-card fade-up" style="transition-delay:0.2s">
+          <div class="project-img"><img src="./images/capstoneimg1.png" alt="Xelor"></div>
+          <div class="project-body">
+            <h3>Xelor — Capstone Project</h3>
+            <p>An e-commerce app inspired by Rolex with CRUD ops, cart management, and purchase history. Built with Vue.js, MongoDB, Express, Node.js.</p>
+            <a href="http://zuitt-bootcamp-prod-560-8949-gamilla.s3-website.us-east-1.amazonaws.com/" target="_blank" class="project-link">View Project →</a>
+          </div>
+        </div>
+
+        <!-- Row 2 centered -->
+        <div style="grid-column: span 3; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; max-width: 800px; margin: 0 auto; width: 100%;">
+          <div class="project-card fade-up">
+            <div class="project-img"><img src="./images/realstateproj.png" alt="Real Estate"></div>
+            <div class="project-body">
+              <h3>Real Estate — Landing Page</h3>
+              <p>A responsive landing page for real estate listings with services and contact features for seamless browsing.</p>
+              <a href="https://web-builder-assignment-phi.vercel.app/" target="_blank" class="project-link">View Project →</a>
+            </div>
+          </div>
+          <div class="project-card fade-up" style="transition-delay:0.1s">
+            <div class="project-img"><img src="./images/djangoproj.png" alt="Django"></div>
+            <div class="project-body">
+              <h3>To-do App — Django</h3>
+              <p>A task management app with user authentication. Create, update, and organize tasks. Built with Django and PostgreSQL.</p>
+              <a href="https://djangoproject-6-w1y6.onrender.com" target="_blank" class="project-link">View Project →</a>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="project-card fade-up" style="transition-delay:0.1s">
-        <div class="project-img"><img src="../images/djangoproj.png" alt="Django"></div>
-        <div class="project-body">
-          <h3>To-do App — Django</h3>
-          <p>A task management app with user authentication. Create, update, and organize tasks. Built with Django and PostgreSQL.</p>
-          <a href="https://djangoproject-6-w1y6.onrender.com" target="_blank" class="project-link">View Project →</a>
-        </div>
-      </div>
-      <div class="project-card fade-up" style="transition-delay:0.2s">
-        <div class="project-img"><img src="../images/realstateproj.png" alt="Real Estate"></div>
-        <div class="project-body">
-          <h3>Real Estate — Landing Page</h3>
-          <p>A responsive landing page for real estate listings with services and contact features for seamless browsing.</p>
-          <a href="https://web-builder-assignment-phi.vercel.app/" target="_blank" class="project-link">View Project →</a>
-        </div>
-      </div>
-      <div class="project-card featured fade-up" style="transition-delay:0.1s">
-        <div class="project-img"><img src="../images/airlineapp.png" alt="LesGoPH"></div>
-        <div class="project-body" style="padding:2rem;justify-content:center;">
-          <div class="section-label" style="margin-bottom:0.5rem;">Featured Project</div>
-          <h3 style="font-size:1.5rem;margin-bottom:0.75rem;">LesGoPH — Airline Booking</h3>
-          <p style="font-size:0.9rem;margin-bottom:1.5rem;">A full-stack airline booking application with flight search, ticket booking, and user authentication. Built using the MERN stack for a smooth and responsive experience.</p>
-          <a href="https://lesgoph.vercel.app/" target="_blank" class="project-link" style="font-size:0.9rem;">View Project →</a>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
