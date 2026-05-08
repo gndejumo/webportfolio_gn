@@ -519,9 +519,16 @@
 
     .project-img {
       overflow: hidden;
-      height: 200px;
+      height: auto;        /* remove fixed height */
     }
 
+    .project-img img {
+      width: 100%;
+      height: auto;        /* let it scale naturally */
+      object-fit: contain; /* show full image */
+      display: block;
+      transition: transform 0.4s;
+    }
     .project-card.featured .project-img { 
       height: 100%; 
       min-height: 320px;
